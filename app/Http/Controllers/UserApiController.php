@@ -173,7 +173,7 @@ class UserApiController extends Controller
            $rules = [                    
                     'phone_number' => 'required',
                     'password'=>'required|min:6',
-                    'device_type'=>'required',
+                    
                     ];
                 
             $validator = Validator::make($req->all(), $rules);  
@@ -184,7 +184,7 @@ class UserApiController extends Controller
                 } 
             else 
                 {
-                    $user=User::where('phone_number', $req->phone_number)->where('device_type', $req->device_type)->first(); 
+                    $user=User::where('phone_number', $req->phone_number)->first(); 
                     
                        if($user)
                         {

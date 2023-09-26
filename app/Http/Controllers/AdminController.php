@@ -16,23 +16,23 @@ class AdminController extends Controller
 {
     public function home()
     {
-        $otp=rand(100001,999999);
-                                    $username = 'austinCANigeria';
-                                    $apiKey = 'af8ad6b0147e2777eca042640a9807f3209c9975df4577e3aace6ce07cb87956';
+        // $otp=rand(100001,999999);
+        //                             $username = 'austinCANigeria';
+        //                             $apiKey = 'af8ad6b0147e2777eca042640a9807f3209c9975df4577e3aace6ce07cb87956';
 
-                                    $AT = new AfricasTalking($username, $apiKey);
+        //                             $AT = new AfricasTalking($username, $apiKey);
 
-                                    $sms = $AT->sms();
+        //                             $sms = $AT->sms();
 
-                                    // Send an SMS
-                                    $result = $sms->send([
-                                        'to'      => '+447341240647', // Recipient's phone number
-                                        'message' => 'Hello! Your CrowdAfrik OTP is: '.$otp.' Please enter this code within the app to complete your verification process. Keep your account secure and do not share this code with anyone. Thank you!',
-                                    ]);
+        //                             // Send an SMS
+        //                             $result = $sms->send([
+        //                                 'to'      => '+447341240647', // Recipient's phone number
+        //                                 'message' => 'Hello! Your CrowdAfrik OTP is: '.$otp.' Please enter this code within the app to complete your verification process. Keep your account secure and do not share this code with anyone. Thank you!',
+        //                             ]);
 
-                                    return $result;
+        //                             return $result;
 
-        //return view('admin.LoginPage');
+        return view('admin.LoginPage');
 
        // print_r(bcrypt("admin"));
     }
